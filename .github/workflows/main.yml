@@ -140,4 +140,11 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: Образы kittygram успешно загружены! 
+          message: |
+            🚀 Деплой Kittygram успешно завершен!
+
+            Пользователь: ${{ github.actor }}
+            Коммит: "${{ github.event.commits[0].message }}"
+
+            🔗 Ссылка на коммит:
+            https://github.com/${{ github.repository }}/commit/${{ github.sha }}
